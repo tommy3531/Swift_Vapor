@@ -38,6 +38,8 @@ extension Droplet {
         get("plaintext") { req in
             return "Hello, world!"
         }
+        
+        // Need to make a new route there
 
         // response to requests to /info domain
         // with a description of the request
