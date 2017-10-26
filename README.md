@@ -22,70 +22,59 @@
     </a>
 </center>
 
-HomeBrew
+# HomeBrew
+
+	1. Homebrew install packages to their own directory and then symlinks their files into /usr/local
+	2. Brew install update
+	3. Brew upgrade
+	4. Need to get access to vapor
+	5. vapor —help - Check if vapor is installed
+	6. vapor self-update
+
+# Create New Vapor project
+
+	mkdir -> cd in dir -> vapor new <name> -> cd into <name> ->
+	vapor build to build the project - fetches all the necessary dependencies
 
 
-1.      Homebrew install packages to their own directory and then symlinks their files into /usr/local
+# Run Project
 
-2. Brew install update
-3. Brew upgrade
-4. Need to get access to vapor
+	vapor run serve —port=8080
+	localhost;8080/hello = hello, world in json
+	vapor xcode
+	Push up to GitHub
 
+# Retrieve from Git
+	git clone
+	vapor build
+	vapor xcode
 
-5.     vapor —help - Check if vapor is installed
-6. vapor self-update
+# Vapor Overview
 
-Create New Vapor project
+	Vapor is modular, code is split up into modules which are grouped together to create a package.  The package.swift file can be utilized by adding a packages Git url.
 
-mkdir -> cd in dir -> vapor new <name> -> cd into <name> ->
-vapor build to build the project - fetches all the necessary dependencies
+	Packages
+	Fluent - https://github.com/vapor/fluent
+	Fluent Provide - https://github.com/vapor/fluent-provider
+	mysql - https://github.com/vapor/mysql
+	mysql driver - https://github.com/vapor/mysql-driver
+	leaf - https://github.com/vapor/leaf
+	kitura with Vapor - https://github.com/vapor-community/kitura-provider
+	Push Notification using HTTP/2 protocol - https://github.com/matthijs2704/vapor-apns
+	swift project to servers - https://github.com/jakeheis/Flock
+	HTTP Logger - https://github.com/himani93/heimdall
+	Vapor providers - https://github.com/search?utf8=✓&q=topic%3Avapor-provider&type=Repositories
 
+# Routing
 
-Run Project
-
-vapor run serve —port=8080
-
-localhost;8080/hello = hello, world in json
-
-
-
-vapor xcode
-
-Push up to GitHub
-
-
-
-Retrieve for Git
-git clone
-vapor build
-vapor xcode
-
-Vapor Overview
-Vapor is modular, code is split up into modules which are grouped together to create a package.  The package.swift file can be utilized by adding a packages Git url.
-
-Packages
-Fluent - https://github.com/vapor/fluent
-Fluent Provide - https://github.com/vapor/fluent-provider
-mysql - https://github.com/vapor/mysql
-mysql driver - https://github.com/vapor/mysql-driver
-leaf - https://github.com/vapor/leaf
-kitura with Vapor - https://github.com/vapor-community/kitura-provider
-Push Notification using HTTP/2 protocol - https://github.com/matthijs2704/vapor-apns
-swift project to servers - https://github.com/jakeheis/Flock
-HTTP Logger - https://github.com/himani93/heimdall
-Vapor providers - https://github.com/search?utf8=✓&q=topic%3Avapor-provider&type=Repositories
-
-
-Routing
-
-When run from Xcode go to safari and type in localhost:8080
-Since I created a vapor project using the —template=api, all routing takes place in the Sources/App/Routes/Routes/Routes.swift
-1.  I created a few simple routes to understand how routing works with vapor, when a user goes to the below urls it will display data specific to that route
-1. / = Hello, Vapor
-2. /json = Hello, Vapor in Json Format
-3. /usr/<int> = You requested User # <int>
-4. /hello = hello, world
-5. /plaintext = Hello, world!
-6. /info = information about server
-7. /description = same as info just a little different
+	When run from Xcode go to safari and type in localhost:8080
+	Since I created a vapor project using the —template=api, all routing takes place in the Sources/App/Routes/Routes/Routes.swift
+	1.  I created a few simple routes to understand how routing works with vapor, when a user goes to the below urls it will display data specific to that route
+	1. / = Hello, Vapor
+	2. /json = Hello, Vapor in Json Format
+	3. /usr/<int> = You requested User # <int>
+	4. /hello = hello, world
+	5. /plaintext = Hello, world!
+	6. /info = information about server
+	7. /description = same as info just a little different
 
